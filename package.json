@@ -1,0 +1,13 @@
+{
+  "name": "micro-frontend-tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "installAll": "cd packages/auth && yarn && cd ../container && yarn && cd ../dashboard && yarn && cd ../marketing && yarn"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
