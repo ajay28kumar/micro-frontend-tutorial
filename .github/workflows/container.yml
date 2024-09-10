@@ -18,7 +18,16 @@ jobs:
 
     steps: 
       - uses: actions/checkout@v2
+      # setup nodejs environment
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: "18.16.1"
+          
+      # install dependencies
       - run: yarn install
+
+      # build the react app
       - run: yarn build
 
       - uses: shinyinc/action-aws-cli@v1.2
