@@ -16,9 +16,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
-      - name: Show repo env secret
-        run: |
-          echo ${{ secrets.AWS_S3_BUCKET_NAME }}
       - uses: actions/checkout@v2
       # setup nodejs environment
       - name: Setup Node.js environment
