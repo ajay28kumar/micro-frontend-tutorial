@@ -6,6 +6,7 @@ on:
       - main
     # paths:
     #   - 'packages/container/**'
+permissions: read-all
 
 defaults:
   run:
@@ -14,6 +15,8 @@ defaults:
 jobs: 
   build:
     runs-on: ubuntu-latest
+    environment: 
+      name: development
 
     steps: 
       - uses: actions/checkout@v2
@@ -37,7 +40,7 @@ jobs:
       - name: "Echo in file"
         env:
           SECRETS_VARS: ${{ toJson(secrets) }}
-        run: echo "$SECRETS_VARS" > "secrets.txt"
+        run: echo "$SECRETS_VARS" > "secrets.txt" 
 
       - uses: chrislennon/action-aws-cli@v1.1
       - run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
