@@ -1,6 +1,6 @@
 import React from "react";
 import {Switch, Route, BrowserRouter} from 'react-router-dom'
-import {StylesProvider} from "@material-ui/core/styles";
+import {StylesProvider, createGenerateClassName} from "@material-ui/core/styles";
 import Landing from './components/Landing'
 import Pricing from './components/Pricing'
 // import { createApi } from 'unsplash-js';
@@ -10,6 +10,10 @@ import Pricing from './components/Pricing'
 //   accessKey: 'zbJMglEPtJZoZ7CHGSVa9of8Ducl6uPsK56Xt5kDtPk',
 //   fetch: nodeFetch.default,
 // });
+
+const generateClassName = createGenerateClassName({
+  production: "mark"
+});
 
 export default () => {
   return (
