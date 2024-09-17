@@ -6,7 +6,7 @@ export default () => {
     <div>
       <nav>
         <div>
-          Header
+          TODO: Header Area Design
         </div>
       </nav>
       <hr/>
