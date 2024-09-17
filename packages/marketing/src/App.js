@@ -12,7 +12,7 @@ import Pricing from './components/Pricing'
 // });
 
 const generateClassName = createGenerateClassName({
-  production: "mark"
+  productionPrefix: "mark"
 });
 
 export default () => {
